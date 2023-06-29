@@ -33,11 +33,7 @@ class DFA:
 Transição dos estados: {self.delta}\nEstado inicial: {self.q0}\nEstados finais: {self.F}"""
 
 
-""" O char passado entre aspas duplas, é o alfabeto do seu Autômato. Você pode alterar ele para outros valores
-caso queira outro formato de Input."""
-
-"""Os números passado como 0, 1 e 2 representam os estados do autômato. Eles seguem o modelo do autômato."""
-
+# Automato com 2 símbolos no alfabeto
 D0 = DFA({0, 1, 2}, {"a", "b"},
          {(0, "a"): 0, (0, "b"): 1,
           (1, "a"): 2, (1, "b"): 1,
@@ -45,4 +41,19 @@ D0 = DFA({0, 1, 2}, {"a", "b"},
          0,
          {0, 1})
 
-D0.runMore()
+# Automato com 3 símbolos, onde o símbolo "c" não pode vir depois de "b".
+D1 = DFA({0, 1, 2}, {"a", "b", "c"},
+         {(0, "a"): 0, (0, "b"): 1, (0, "c"): 0,
+          (1, "a"): 2, (1, "b"): 1, (1, "c"): 2,
+          (2, "a"): 2, (2, "b"): 2, (2, "c"): 2},
+         0,
+         {0, 1})
+
+# Automato com 3 símbolos, onde "c" só pode vir depois de "b" e nada deve vir depois de "c"
+D2 = DFA({0, 1, 2, 3}, {"a", "b", "c"},
+         {(0, "a"): 0, (0, "b"): 1, (0, "c"): 3,
+          (1, "a"): 3, (1, "b"): 1, (1, "c"): 2,
+          (2, "a"): 3, (2, "b"): 3, (2, "c"): 2,
+          (3, "a"): 3, (3, "b"): 3, (3, "c"): 3},
+         0,
+         {0, 1, 2})
