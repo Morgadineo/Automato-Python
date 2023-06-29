@@ -18,7 +18,7 @@ class DFA:
                 w = w[1:]
             return print(f"{q in self.F}\n")
         except KeyError:
-            print(f"\nERRO: Input fora do alfabeto!\n")
+            print(f"\nERRO: Transição não listada / Símbolo não listado!\n")
 
     def runMore(self):
         while True:
@@ -57,3 +57,28 @@ D2 = DFA({0, 1, 2, 3}, {"a", "b", "c"},
           (3, "a"): 3, (3, "b"): 3, (3, "c"): 3},
          0,
          {0, 1, 2})
+
+# Autômato com 3 símbolos onde não importa a ordem.
+D3 = DFA({0}, {"a", "b", "c"},
+         {(0, "a"): 0, (0, "b"): 0, (0, "c"): 0},
+         0,
+         {0})
+
+# Autômato com 3 símbolos onde b e c podem vir alternados.
+D4 = DFA({0, 1, 2}, {"a", "b", "c"},
+         {(0, "a"): 0, (0, "b"): 1, (0, "c"): 1,
+          (1, "a"): 2, (1, "b"): 1, (1, "c"): 1,
+          (2, "a"): 2, (2, "b"): 2, (2, "c"): 2},
+         0,
+         {0, 1})
+
+# Autômato com 3 símbolos que permite "abcba". Permite transições de "c" para "b", onde "b" pode ir para "a" e repetir.
+D5 = DFA({0, 1, 2, 3}, {"a", "b", "c"},
+         {(0, "a"): 0, (0, "b"): 1, (0, "c"): 3,
+          (1, "a"): 0, (1, "b"): 1, (1, "c"): 2,
+          (2, "a"): 3, (2, "b"): 1, (2, "c"): 2,
+          (3, "a"): 3, (3, "b"): 3, (3, "c"): 3},
+         0,
+         {0, 1, 2})
+
+D5.runMore()
