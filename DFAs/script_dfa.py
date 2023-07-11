@@ -10,18 +10,6 @@ class DFA:
         self.q0 = q0  # Estado inicial
         self.F = F  # Estados finais
 
-    def minimizar(self):
-        P = []
-        P0 = [self.F, self.Q - self.F]
-        P = [P0]
-        for B in P0:
-            for s in self.Sigma:
-                for e, e1 in B:
-                    d = self.delta(e, s)
-                    d1 = self.delta(e1, s)
-                    if (d in B) and (d1 not in B):
-                        P1 = [self.F, ]
-
     def run(self, w):
         q = self.q0
         try:
@@ -132,4 +120,5 @@ D9 = DFA({0, 1, 2, 3, 4, 5}, {"0", "1"},
          0,
          {0})
 
-D9.minimizar()
+D10 = DFA({0, 1, 2, 3, 4, 5}, {"0", "1"},
+          {(0, "0"): "1", (0, "1"): "2"})
