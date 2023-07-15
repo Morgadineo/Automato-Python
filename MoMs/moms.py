@@ -27,8 +27,8 @@ class Mom:
                 Mom.run(self, w)
 
         def __repr__(self):
-            return f"""---Mearly Machine (Deterministic finite automaton)---\nEstados possiveis: {self.Q}\nAlfabeto: {self.Sigma}
-    Transição dos estados e output: {self.delta}\nEstado inicial: {self.q0}\nEstados finais: {self.F}"""
+            return f"""---Moore Machine (Deterministic finite automaton)---\nEstados possiveis e output: {self.Q}\nAlfabeto: {self.Sigma}
+    Transição dos estados: {self.delta}\nEstado inicial: {self.q0}\n"""
 
 
 Mom0 = Mom({0: "0", 1: "0", 2: "0", 3: "1", 4: "1"}, {"0", "1"},
@@ -38,5 +38,3 @@ Mom0 = Mom({0: "0", 1: "0", 2: "0", 3: "1", 4: "1"}, {"0", "1"},
             (3, "0"): 4, (3, "1"): 1,
             (4, "0"): 1, (4, "1"): 3},
            0)
-
-Mom0.runMore()
