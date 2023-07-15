@@ -29,7 +29,7 @@ class Mem:
 
         def __repr__(self):
             return f"""---Mearly Machine (Deterministic finite automaton)---\nEstados possiveis: {self.Q}\nAlfabeto: {self.Sigma}
-    Transição dos estados e output: {self.delta}\nEstado inicial: {self.q0}\nEstados finais: {self.F}"""
+    Transição dos estados e output: {self.delta}\nEstado inicial: {self.q0}\n"""
 
 
 # O valor de cada chave em delta é ('Valor do output', Próximo estado)
