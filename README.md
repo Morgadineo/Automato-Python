@@ -7,26 +7,35 @@ Os inputs dos autômatos são chamados de Linguagens e se trata de uma string: "
 
 # Modelos de autômatos realizados:
 
-## DFA (Deterministic Finite Automata - Autômato Finito Determinístico)
-## NFA (Non-Deterministic Finite Automata - Autômato finito não-determinístico)
-## Mealy Machines (Máquina de Mealy)
-## Moore Machines (Máquina de Moore)
-## Pushdown Automata (Autômato pilha)
+#### DFA (Deterministic Finite Automata - Autômato Finito Determinístico)
+![DFA](dfa0.png)
+
+#### NFA (Non-Deterministic Finite Automata - Autômato finito não-determinístico)
+![NFA](nfa_0.png)
+
+#### Mealy Machines (Máquina de Mealy)
+![MeM](mem0.png)
+
+#### Moore Machines (Máquina de Moore)
+![MoM](mom1.png)
+
+#### Pushdown Automata (Autômato pilha)
+![MoM](pa0.png)
 
 # Modelos que restam:
 
-## Turing Machine (Máquina de Turing)
-## Multi-Tape Turing Machine (Máquina de Turing de fita multipla)
-## Turing Machine With Building Blocks (Máquina de Turing com blocos de construção)
+#### Turing Machine (Máquina de Turing)
+#### Multi-Tape Turing Machine (Máquina de Turing de fita multipla)
+#### Turing Machine With Building Blocks (Máquina de Turing com blocos de construção)
 
 # Outros presentes no JFLAP:
 
-## Grammar (Grámatica)
-## L-System
-## Regular Expression
-## Regular Pumping Lemma
-## Context-Free Pumping Lemma
+#### Grammar (Grámatica)
+#### L-System
+#### Regular Expression
+#### Regular Pumping Lemma
+#### Context-Free Pumping Lemma
 
-## O modelo dos autômatos foram feitos utilizando a ferramenta JFLAP.
+O modelo dos autômatos foram feitos utilizando a ferramenta JFLAP.
 
-A ideia inicial e o código inicial foi pego vídeo: https://www.youtube.com/watch?v=32bC33nJR3A&t=261s do canal ComputerPhile. Modelo do DFA e NFA foi realizado pelo professor Thorsten Altenkirch da universidade de Nottingham. O restante foi feito por mim mesmo.
+A ideia inicial e o código inicial foi pego vídeo: https://www.youtube.com/watch?v=32bC33nJR3A&t=261s do canal ComputerPhile. Modelo do DFA e NFA foi realizado pelo professor Thorsten Altenkirch da universidade de Nottingham.
